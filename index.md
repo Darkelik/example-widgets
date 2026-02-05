@@ -107,3 +107,22 @@ Module is remotely hosted
 :::
 ::::
 :::::
+
+## scikit-image version
+
+::::{figure}
+:::{anywidget} http://localhost:3200/modules/scikit-image-version.mjs
+{}
+:::
+Version sidebar (GitHub API); ensure `npm run serve` is running locally.
+::::
+
+:::::{note} Usage
+:class: dropdown
+Ensure `npm run serve` is running locally.
+::::{code} myst
+:::{anywidget} http://localhost:3200/modules/scikit-image-version.mjs
+{}
+:::
+::::
+:::::
