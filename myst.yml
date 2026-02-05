@@ -2,12 +2,21 @@
 version: 1
 project:
   id: ec93342d-e4be-4930-b430-87fd42d67658
-  # title:
-  # description:
+  title: AnyWidget Example Testing Ground
+  description: Example project for developing and testing AnyWidget-compatible widgets with MyST.
   # keywords: []
-  # authors: []
+  authors:
+    - name: Steve Purves
+      orcid: 0000-0002-0760-5497
   # github:
   # To autogenerate a Table of Contents, run "myst init --write-toc"
+  downloads:
+    - file: modules/confetti.mjs
+      title: confetti module
+    - file: modules/divmap.mjs
+      title: div-map module
+  toc:
+    - file: index.md
 site:
   template: book-theme
   # options:
