@@ -10,11 +10,12 @@ date: 2025-12-20
 
 # Examples
 
+![](./image.jpg)
+
 ## Confetti
 
 ::::{figure}
 :::{anywidget} http://localhost:3200/modules/confetti.mjs
-{}
 :::
 Ensure `npm run serve` is running locally.
 ::::
@@ -112,7 +113,6 @@ Module is remotely hosted
 
 ::::{figure}
 :::{anywidget} http://localhost:3200/modules/scikit-image-version.mjs
-{}
 :::
 Version sidebar (GitHub API); ensure `npm run serve` is running locally.
 ::::
@@ -122,7 +122,6 @@ Version sidebar (GitHub API); ensure `npm run serve` is running locally.
 Ensure `npm run serve` is running locally.
 ::::{code} myst
 :::{anywidget} http://localhost:3200/modules/scikit-image-version.mjs
-{}
 :::
 ::::
 :::::
