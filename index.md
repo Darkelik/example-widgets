@@ -10,10 +10,21 @@ date: 2025-12-20
 
 # Tests
 
+## Example-widget
+
 ```{anywidget} ./modules/example-widget.mjs
 :css: ./css/example-widget-style.css
 {
   "count": 0
+}
+```
+
+## Slider
+
+```{anywidget} ./modules/slider.mjs
+:css: ./css/slider-style.css
+{
+  "text": "Solutions"
 }
 ```
 
@@ -57,14 +68,14 @@ Ensure `npm run serve` is running locally.
   ]
 }
 :::
+
 Ensure `npm run serve` is running locally.
+
 ::::
 
 :::::{note} Usage
 :class: dropdown
-
 Ensure `npm run serve` is running locally.
-
 ::::{code} myst
 :::{anywidget} ./modules/divmap.mjs
 {
@@ -119,15 +130,16 @@ Module is remotely hosted
 ## scikit-image version
 
 ::::{figure}
-:::{anywidget} ./modules/scikit-image-version.mjs
+:::{anywidget} http://localhost:3200/modules/scikit-image-version.mjs
 :::
-Version sidebar (GitHub API).
+Version sidebar (GitHub API); ensure `npm run serve` is running locally.
 ::::
 
 :::::{note} Usage
 :class: dropdown
+Ensure `npm run serve` is running locally.
 ::::{code} myst
-:::{anywidget} ./modules/scikit-image-version.mjs
+:::{anywidget} http://localhost:3200/modules/scikit-image-version.mjs
 :::
 ::::
 :::::
