@@ -3,7 +3,7 @@
  * AnyWidget-compatible ESM: exports default { render }.
  */
 
-import confetti from "https://esm.sh/canvas-confetti@1.6.0";
+import confetti from 'https://esm.sh/canvas-confetti@1.9.4';
 
 export default {
   render({ model, el }) {

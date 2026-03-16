@@ -17,8 +17,7 @@ project:
       title: div-map module
   toc:
     - file: index.md
-site:
-  template: book-theme
+site: {}
   # options:
   #   favicon: favicon.ico
   #   logo: site_logo.png
