@@ -8,6 +8,15 @@ authors:
 date: 2025-12-20
 ---
 
+# Tests
+
+```{anywidget} ./modules/example-widget.mjs
+:css: ./css/example-widget-style.css
+{
+  "count": 0
+}
+```
+
 # Examples
 
 ![](./image.jpg)
@@ -15,7 +24,7 @@ date: 2025-12-20
 ## Confetti
 
 ::::{figure}
-:::{anywidget} http://localhost:3200/modules/confetti.mjs
+:::{anywidget} http://localhost:3000/modules/confetti.mjs
 :::
 Ensure `npm run serve` is running locally.
 ::::
