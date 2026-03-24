@@ -15,7 +15,7 @@ date: 2025-12-20
 ```{anywidget} ./modules/example-widget.mjs
 :css: ./css/example-widget-style.css
 {
-  "count": 0
+  "count" : 0
 }
 ```
 
@@ -24,26 +24,30 @@ date: 2025-12-20
 ```{anywidget} ./modules/slider.mjs
 :css: ./css/slider-style.css
 {
-  "text": "Solutions"
+  "id1": "cb-solutions"
+  "text1": "Solutions"
+  "id2": "cb-notes"
+  "text2": "Notes enseignants"
 }
 ```
 
 # Examples
 
-<!-- ![](./image.jpg) -->
+![](./image.jpg)
 
 ## Confetti
 
-:::{anywidget} ./modules/confetti.mjs
+::::{figure}
+:::{anywidget} http://localhost:3200/modules/confetti.mjs
 :::
-
 Ensure `npm run serve` is running locally.
+::::
 
 :::::{note} Usage
 :class: dropdown
 Ensure `npm run serve` is running locally.
 ::::{code} myst
-:::{anywidget} ./modules/confetti.mjs
+:::{anywidget} http://localhost:3200/modules/confetti.mjs
 {}
 :::
 ::::
@@ -51,7 +55,8 @@ Ensure `npm run serve` is running locally.
 
 ## div-map
 
-:::{anywidget} ./modules/divmap.mjs
+::::{figure}
+:::{anywidget} http://localhost:3200/modules/divmap.mjs
 {
   colors: "reds",
   data: [
@@ -68,16 +73,16 @@ Ensure `npm run serve` is running locally.
   ]
 }
 :::
-
 Ensure `npm run serve` is running locally.
-
 ::::
 
 :::::{note} Usage
 :class: dropdown
+
 Ensure `npm run serve` is running locally.
+
 ::::{code} myst
-:::{anywidget} ./modules/divmap.mjs
+:::{anywidget} http://localhost:3200/modules/divmap.mjs
 {
   colors: "reds",
   data: [
@@ -96,7 +101,7 @@ Ensure `npm run serve` is running locally.
 :::
 ::::
 :::::
-
+<!--
 ## Vizarr
 
 ::::{figure}
@@ -126,7 +131,7 @@ Module is remotely hosted
 :::
 ::::
 :::::
-
+-->
 ## scikit-image version
 
 ::::{figure}

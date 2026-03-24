@@ -1,0 +1,67 @@
+
+.form-check {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-check-input {
+    --bs-form-switch-bg: url(data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='rgba(0, 0, 0, 0.25)'/%3E%3C/svg%3E);
+    background-image: var(--bs-form-switch-bg); 
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow:
+        1px 1px 0px 0px,
+        2px 2px 0px 0px,
+        3px 3px 0px 0px,
+        4px 4px 0px 0px,
+        5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+    
+    background-position: 0;
+    border-radius: 2em;
+    margin-left: -2.5em;
+    transition: background-position .15s ease-in-out;
+    width: 2em;
+    float: left;
+    --bs-form-check-bg:a var(--bs-body-bg);
+    appearance: none;
+    background-color: var(--bs-form-check-bg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    height: 1em;
+    margin-top: .25em;
+    print-color-adjust: exact;
+    vertical-align: top;
+    
+}
+
+.form-check-input:focus {
+    --bs-form-switch-bg: url(data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%2386b7fe'/%3E%3C/svg%3E);
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 .1875rem var(#e47fd7);
+    outline: 0;
+}
+
+.form-check-input:checked {
+    --bs-form-switch-bg: url(data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E);
+    background-position: 100%;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.form-check-input:checked[type=checkbox] {
+    --bs-form-check-bg-image: url(data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3E%3C/svg%3E);
+}

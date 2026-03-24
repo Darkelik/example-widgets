@@ -1,43 +1,68 @@
-.form-check {
+.slider-container {
     display: flex;
     flex-direction: row;
 }
 
-.form-check-input {
-    --bs-form-switch-bg: url(data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='rgba(0, 0, 0, 0.25)'/%3E%3C/svg%3E);
-    background-image: var(--bs-form-switch-bg);
-    background-position: 0;
-    border-radius: 2em;
-    margin-left: -2.5em;
-    transition: background-position .15s ease-in-out;
-    width: 2em;
-    float: left;
-    --bs-form-check-bg: var(--bs-body-bg);
-    appearance: none;
-    background-color: var(--bs-form-check-bg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: var(--bs-border-width) solid var(--bs-border-color);
-    height: 1em;
-    margin-top: .25em;
-    print-color-adjust: exact;
-    vertical-align: top;
+.container {
+    display: flex;
+    flex-direction: row;
+    margin-right: 100px;
 }
 
-.form-check-input:focus {
-    --bs-form-switch-bg: url(data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%2386b7fe'/%3E%3C/svg%3E);
-    border-color: #86b7fe;
-    box-shadow: 0 0 0 .1875rem var(#e47fd7);
-    outline: 0;
+.switch {
+  display: flex;
+    flex-direction: row;
+  height: 17px;
+  position: relative;
+  width: 30px;
 }
 
-.form-check-input:checked {
-    --bs-form-switch-bg: url(data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E);
-    background-position: 100%;
-    background-color: #0d6efd;
-    border-color: #0d6efd;
+.switch p {
+    position: relative;
+    left: 40px;
+    bottom: 22px;
+    white-space: nowrap;
 }
 
-.form-check-input:checked[type=checkbox] {
-    --bs-form-check-bg-image: url(data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3E%3C/svg%3E);
+.switch input {
+  display:none;
 }
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 2px;
+  content: "";
+  height: 13px;
+  left: 2px;
+  position: absolute;
+  transition: .4s;
+  width: 13px;
+}
+
+input:checked + .slider {
+  background-color: #0d6efd;
+}
+
+input:checked + .slider:before {
+  transform: translateX(13px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
