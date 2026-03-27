@@ -18,6 +18,13 @@ export default {
         div2.classList.add('slider');
         div2.classList.add('round');
 
+        input.addEventListener('change', () => {
+            const checked = input.checked;
+            window.__solutionsToggleState = checked;
+            window.dispatchEvent(new CustomEvent('solutions-toggle', { detail: { open: checked } }));
+            console.log('slider: dispatched solutions-toggle', checked);
+        });
+
         const p = document.createElement('p');
         p.innerHTML = "Solutions";
         

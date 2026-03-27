@@ -19,15 +19,17 @@ date: 2025-12-20
 }
 ```
 
-## Slider
+## Sliders Solutions & Notes enseignants
 
 ```{anywidget} ./modules/slider.mjs
 :css: ./css/slider-style.css
+```
+
+```{anywidget} ./modules/solution.mjs
+:css: ./css/solution.css
 {
-  "id1": "cb-solutions"
-  "text1": "Solutions"
-  "id2": "cb-notes"
-  "text2": "Notes enseignants"
+  "title" : "Solution",
+  "content" : "Voici la solution."
 }
 ```
 

@@ -1,0 +1,12 @@
+.solution {
+    padding: 0px 0px;
+    border: none;
+    cursor: pointer;
+}
+
+.alert {
+    background-color: #d1e7dd;
+    border-radius: 6px;
+    color: #0a3622;
+    position: relative;
+}
