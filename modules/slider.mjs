@@ -14,16 +14,16 @@ export default {
         input.type = 'checkbox';
         input.id = "cb-solutions";
 
-        const div2 = document.createElement('div');
-        div2.classList.add('slider');
-        div2.classList.add('round');
-
         input.addEventListener('change', () => {
             const checked = input.checked;
             window.__solutionsToggleState = checked;
             window.dispatchEvent(new CustomEvent('solutions-toggle', { detail: { open: checked } }));
             console.log('slider: dispatched solutions-toggle', checked);
         });
+
+        const div2 = document.createElement('div');
+        div2.classList.add('slider');
+        div2.classList.add('round');
 
         const p = document.createElement('p');
         p.innerHTML = "Solutions";
@@ -42,6 +42,13 @@ export default {
         const input2 = document.createElement('input');
         input2.type = 'checkbox';
         input2.id = "cb-notes";
+
+        input2.addEventListener('change', () => {
+            const checked = input2.checked;
+            window.__notesToggleState = checked;
+            window.dispatchEvent(new CustomEvent('notes-toggle', { detail: { show: checked } }));
+            console.log('slider: dispatched notes-toggle', checked);
+        });
 
         const div4 = document.createElement('div');
         div4.classList.add('slider');

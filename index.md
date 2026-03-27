@@ -21,22 +21,31 @@ date: 2025-12-20
 
 ## Sliders Solutions & Notes enseignants
 
+```{anywidget} ./modules/notes-controller.mjs
+:css: ./css/solution-notes.css
+```
+
 ```{anywidget} ./modules/slider.mjs
 :css: ./css/slider-style.css
 ```
 
 ```{anywidget} ./modules/solution.mjs
-:css: ./css/solution.css
+:css: ./css/solution-notes.css
 {
   "title" : "Solution",
   "content" : "Voici la solution."
 }
 ```
 
+:::::{tip} Note aux enseignants
+:class: hidden notes-enseignants
+Voici une note aux enseignants.
+:::::
+
 # Examples
-
+<!--
 ![](./image.jpg)
-
+-->
 ## Confetti
 
 ::::{figure}
