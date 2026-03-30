@@ -18,7 +18,6 @@ export default {
 
         window.addEventListener('notes-toggle', onNotesToggle);
 
-        // Appliquer l'état initial si déjà défini
         if (typeof window.__notesToggleState === 'boolean') {
             applyNotesVisibility(window.__notesToggleState);
         }

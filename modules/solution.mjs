@@ -25,7 +25,6 @@ export default {
 
         window.addEventListener('solutions-toggle', onSolutionsToggle);
 
-        // Harmonize avec l'état courant du slider, s'il a déjà été basculé
         if (typeof window.__solutionsToggleState === 'boolean') {
             applyState(window.__solutionsToggleState);
         }
