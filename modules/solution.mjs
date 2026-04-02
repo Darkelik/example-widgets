@@ -25,10 +25,6 @@ export default {
 
         window.addEventListener('solutions-toggle', onSolutionsToggle);
 
-        if (typeof window.__solutionsToggleState === 'boolean') {
-            applyState(window.__solutionsToggleState);
-        }
-
         return () => {
             window.removeEventListener('solutions-toggle', onSolutionsToggle);
             solution.remove();

@@ -18,10 +18,6 @@ export default {
 
         window.addEventListener('notes-toggle', onNotesToggle);
 
-        if (typeof window.__notesToggleState === 'boolean') {
-            applyNotesVisibility(window.__notesToggleState);
-        }
-
         return () => {
             window.removeEventListener('notes-toggle', onNotesToggle);
             controller.remove();

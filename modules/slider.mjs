@@ -16,9 +16,7 @@ export default {
 
         input_solutions.addEventListener('change', () => {
             const checked = input_solutions.checked;
-            window.__solutionsToggleState = checked;
             window.dispatchEvent(new CustomEvent('solutions-toggle', { detail: { open: checked } }));
-            // console.log('slider: dispatched solutions-toggle', checked);
         });
 
         const slider_solutions = document.createElement('div');
@@ -45,9 +43,7 @@ export default {
 
         input_notes.addEventListener('change', () => {
             const checked = input_notes.checked;
-            window.__notesToggleState = checked;
             window.dispatchEvent(new CustomEvent('notes-toggle', { detail: { show: checked } }));
-            // console.log('slider: dispatched notes-toggle', checked);
         });
 
         const slider_notes = document.createElement('div');
