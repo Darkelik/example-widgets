@@ -10,7 +10,10 @@ subtitle: Based on the AnyWidget standard
 ```{anywidget} ./modules/notes-controller.mjs
 :css: ./css/solution-notes.css
 ```
-
+<!--
+```{anywidget} ./modules/solution-controller.mjs
+```
+-->
 ## Sliders Solutions & Notes enseignants
 
 ```{anywidget} ./modules/solution.mjs
@@ -21,8 +24,8 @@ subtitle: Based on the AnyWidget standard
 }
 ```
 
-:::{tip} Note aux enseignants
-:class: hidden notes-enseignants
+:::{admonition} Note aux enseignants
+:class: hidden
 Voici une note aux enseignants.
 :::
 
@@ -34,7 +37,7 @@ Voici une note aux enseignants.
 }
 ```
 
-:::{note} Question 1
+:::{admonition} Question 1
 :class: 
 Ecrivez le début d'une simple boucle "for" en python.
 ```{anywidget} ./modules/solution.mjs
@@ -44,7 +47,7 @@ Ecrivez le début d'une simple boucle "for" en python.
   "content" : "Voici un exemple : 'for i in range(5):'"
 }
 ```
-:::{tip} Note aux enseignants
-:class: hidden notes-enseignants
+:::{admonition} Note aux enseignants
+:class: hidden
 Voir les boucles "while" pour le prochain exercice.
 :::
