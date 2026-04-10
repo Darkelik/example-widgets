@@ -1,14 +1,65 @@
-// UNUSED
 export default {
     render({ model, el }) {
-        show_hide_solution_init();
+        const controller = document.createElement('div');
+        controller.style.display = 'none';
+        el.appendChild(controller);
 
-        return () => { }
+        const starts = Array.from(document.querySelectorAll("p, span")).filter(solution => {
+            return solution.innerHTML.includes('BEGIN SOLUTION');
+        });
+        const stops = Array.from(document.querySelectorAll("p, span")).filter(solution => {
+            return solution.innerHTML.includes('END SOLUTION');
+        });
+
+        for ( let i = 0; i < starts.length; i++ ) {
+            let start = starts[i];
+            let stop = stops[i];
+            let parent = start.parentNode;
+            // This did happen a couple times; a node disconnected from the DOM?
+            if ( parent == null ) break;
+            let startindex = Array.prototype.indexOf.call(parent.childNodes, start);
+            let stopindex = Array.prototype.indexOf.call(parent.childNodes, stop);
+
+            let range = new Range();
+            range.setStart(parent, startindex);
+            range.setEnd(parent, stopindex);
+
+            let details = document.createElement("details");
+            details.className = "alert alert-success solution";
+            range.surroundContents(details);
+            start.remove();
+            stop.remove();
+            details.innerHTML = "<summary>Solution<span class='consult' hidden=''> (<b>consultée</b>)</span></summary>" + details.innerHTML;
+            details.addEventListener("toggle", function() {
+                if (details.open) {
+                    details.firstChild.lastChild.hidden = false
+                }
+            })
+            
+        }
+
+        const applyState = (open) => {
+            if (typeof open === 'boolean') {
+                for (let detail of document.querySelectorAll(".solution")) {
+                    detail.open = open;
+                }
+            }
+        };
+
+        const onSolutionsToggle = (event) => {
+            applyState(event?.detail?.open);
+        };
+
+        window.addEventListener('solutions-toggle', onSolutionsToggle);
+
+        return () => {
+            controller.remove();
+        }
     }
 }
 
 // $(document).ready(show_hide_solution_init);
-
+// Unused functions for reference
 function show_hide_solution_init() {
     // Transform the dom to make the solution and hidden test regions foldable
     make_foldable_environment("p", "BEGIN SOLUTION", "END SOLUTION", "Solution", "consultée", "alert alert-success solution");
@@ -42,13 +93,13 @@ function make_foldable_environment(tag_type, start_string, stop_string, title, s
         paths = $(document)[0].URL.split('/')
         dir = paths[paths.length-2]
 
-        if ( $(document)[0].URL.match(with_solutions_regexp)) {
+        if ( $(document)[0].URL.match("")) {
             let details = document.createElement("details");
-            details.className = classes;
+            details.className = classes; 
             range.surroundContents(details);
             start.remove();
             stop.remove();
-            details.innerHTML = "<summary>"+title+"<span class='consult' hidden=''> (<b>"+shown_title+"</b>)</span></summary>" + details.innerHTML;
+            details.innerHTML = "<summary>"+title+"<span class='consult' hidden=''> (<b>"+shown_title+"</b>)</span></summary>" + details.innerHTML; 
             details.addEventListener("toggle", function() {
                 if (details.open) {
                     details.firstChild.lastChild.hidden = false

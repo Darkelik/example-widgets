@@ -10,44 +10,44 @@ subtitle: Based on the AnyWidget standard
 ```{anywidget} ./modules/notes-controller.mjs
 :css: ./css/solution-notes.css
 ```
-<!--
+
 ```{anywidget} ./modules/solution-controller.mjs
 ```
--->
+
 ## Sliders Solutions & Notes enseignants
 
-```{anywidget} ./modules/solution.mjs
-:css: ./css/solution-notes.css
-{
-  "title" : "Solution",
-  "content" : "Voici la solution."
+BEGIN SOLUTION
+
+Voici la solution.
+
+END SOLUTION
+
+```{code-cell}
+/** Distance de deux points sur une droite
+ * @param a un entier: la coordonnée du premier point
+ * @param b un entier: la coordonnée du deuxième point
+ * @return la valeur absolue de la différence entre a et b
+ **/
+int distance(int a, int b) {
+    /// BEGIN SOLUTION
+    return abs(b - a);
+    /// END SOLUTION
 }
 ```
 
 :::{admonition} Note aux enseignants
-:class: hidden
 Voici une note aux enseignants.
 :::
 
-```{anywidget} ./modules/button.mjs
-:css: ./css/button.css
-{
-  "title" : "Cliquez moi!",
-  "content" : "J'ai été cliqué!"
-}
-```
-
 :::{admonition} Question 1
-:class: 
+
 Ecrivez le début d'une simple boucle "for" en python.
-```{anywidget} ./modules/solution.mjs
-:css: ./css/solution-notes.css
-{
-  "title" : "Solution",
-  "content" : "Voici un exemple : 'for i in range(5):'"
-}
-```
+
+BEGIN SOLUTION
+
+Voici un exemple : 'for i in range(5):'
+
+END SOLUTION
 :::{admonition} Note aux enseignants
-:class: hidden
 Voir les boucles "while" pour le prochain exercice.
 :::

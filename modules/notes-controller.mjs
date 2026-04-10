@@ -1,5 +1,13 @@
 export default {
     render({ model, el }) {
+        const notes = Array.from(document.querySelectorAll('.myst-admonition')).filter(note => {
+            const titleElement = note.querySelector('.myst-admonition-header-text');
+            return titleElement && titleElement.textContent.includes('Note aux enseignants');
+        });
+        notes.forEach(note => {
+            note.style.display = 'none';
+        });
+
         // Élément invisible pour contrôler les notes
         const controller = document.createElement('div');
         controller.style.display = 'none';
@@ -12,8 +20,6 @@ export default {
                     const titleElement = note.querySelector('.myst-admonition-header-text');
                     return titleElement && titleElement.textContent.includes('Note aux enseignants');
                 });
-            console.log('Notes trouvées:', notes);
-            console.log('Tous les admonitions:', document.querySelectorAll('.admonition'));
             notes.forEach(note => {
                 note.style.display = show ? 'block' : 'none';
             });
