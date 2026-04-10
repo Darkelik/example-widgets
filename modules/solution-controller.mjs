@@ -7,6 +7,8 @@ export default {
     }
 }
 
+// $(document).ready(show_hide_solution_init);
+
 function show_hide_solution_init() {
     // Transform the dom to make the solution and hidden test regions foldable
     make_foldable_environment("p", "BEGIN SOLUTION", "END SOLUTION", "Solution", "consultée", "alert alert-success solution");
@@ -20,8 +22,6 @@ function show_hide_solution_init() {
     // To control whether the solutions are globally shown
     add_switch(header_buttons, "show-solutions-slider", "Solutions", show_solutions);
 }
-
-$(document).ready(show_hide_solution_init);
 
 function make_foldable_environment(tag_type, start_string, stop_string, title, shown_title, classes) {
     let starts = $(tag_type+":contains('"+start_string+"')");
